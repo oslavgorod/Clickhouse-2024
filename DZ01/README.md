@@ -5,7 +5,7 @@
 
 ## Описание
 
-[Отчет](https://file.pdf)
+[Отчет](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ01/%D0%94%D0%9701.pdf)
 
 1. ITSumma
 Компания осуществляет IT аутсорсинг.
