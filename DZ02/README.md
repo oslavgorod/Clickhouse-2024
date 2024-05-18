@@ -6,3 +6,4 @@
 > - 40 GB SSD
 
 Тестовый датасет был загружен и установлен из [официальной документации Clickhouse](https://clickhouse.com/docs/en/getting-started/example-datasets/nyc-taxi).  
+Результат выполнения запроса и статуса службы clickhouse-server:  
