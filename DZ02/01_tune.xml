@@ -1,0 +1,9 @@
+<clickhouse>
+  <profiles>
+    <default>
+      <max_memory_usage>4000000000</max_memory_usage>
+      <max_memory_usage_for_all_queries>4000000000</max_memory_usage_for_all_queries>
+      <max_concurrent_queries_for_user>8</max_concurrent_queries_for_user>
+    </default>
+  </profiles>
+</clickhouse>
