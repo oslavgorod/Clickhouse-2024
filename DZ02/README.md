@@ -13,7 +13,7 @@
 
 ## Тестирование производительности  
 
-Для измерения прроизводительности использовалась штатная утилита _clickhouse-benchmark_.  
+Для измерения производительности использовалась штатная утилита _clickhouse-benchmark_.  
 
 Изменение парметров было сделано в файле [/etc/clickhouse-server/users.d/01_tune.xml](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ02/01_tune.xml)  
 
@@ -21,4 +21,4 @@
 
 Параметру _max_concurrent_queries_for_user_ установлено значение 8 (количество ядер процессора * 2). Данный параметр определяет максимальное количество одновременно обрабатываемых запросов.  
 
-Результаты тестирование представлены в [отчете](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ02/%D0%94%D0%9702.pdf)
+Результаты тестирование представлены в [отчете](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ02/%D0%94%D0%9702.pdf).
