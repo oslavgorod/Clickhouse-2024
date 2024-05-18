@@ -12,8 +12,9 @@
 
 ## Тестирование производительности  
 
-Для измерения прроизводительности использовалась штатная утилита clickhouse-benchmark.  
-Изменение парметров было сделано в файле [/etc/clickhouse-server/users.d/01_default.xml](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ02/01_tune.xml)  
+Для измерения прроизводительности использовалась штатная утилита _clickhouse-benchmark_.  
+
+Изменение парметров было сделано в файле [/etc/clickhouse-server/users.d/01_tune.xml](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ02/01_tune.xml)  
 
 Параметрам _max_memory_usage_ и _max_memory_usage_for_all_queries_ установлено значение 4000000000. Данные праметры отвечают за макссимальный возможный объём оперативной памяти для выполнения запроса на одном сервере. По умолчанию значение 0, что подразумевает отсутствие ограничений.  
 
