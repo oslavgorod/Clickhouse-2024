@@ -19,6 +19,8 @@ USE restaurant;
     date DateTime COMMENT 'Дата добавления позиции в меню (датавремя)'  
 )  
 ENGINE = MergeTree  
-ORDER BY id  
+ORDER BY id
+
+describe menu FORMAT Vertical
 
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/002.png)  
