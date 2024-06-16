@@ -54,11 +54,23 @@ ORDER BY id
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/005.png)  
 
 ### 4. Добавить несколько новых полей, удалить пару старых.  
+Добавляем столбцы:  
 
 > alter table menu add column added_1 Int32 FIRST;  
   alter table menu add column added_2 Float64 AFTER desc;  
   alter table menu add column added_3 DateTime64;
 
 Проверяем результат:  
-> describe menu FORMAT TSV;  
+> describe menu FORMAT TSV;
+
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/006.png)  
+
+Удаляем столбцы:  
+
+> alter table menu drop column added_3;  
+  alter table menu drop column date;
+
+Проверяем:  
+> describe menu FORMAT TSV;
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/007.png)  
