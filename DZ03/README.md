@@ -74,3 +74,5 @@ ORDER BY id
 > describe menu FORMAT TSV;
 
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/007.png)  
+
+### 5. Заселектить таблицу (любую) из sample dataset [Menus](https://clickhouse.com/docs/en/getting-started/example-datasets/menus)  
