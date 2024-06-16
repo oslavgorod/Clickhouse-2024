@@ -21,3 +21,4 @@ USE restaurant;
 ENGINE = MergeTree  
 ORDER BY id  
 
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/002.png)  
