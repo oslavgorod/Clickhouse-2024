@@ -43,5 +43,6 @@ ORDER BY id
 
 > select * from menu \G
 
-![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/003.png)
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/003.png)  
 
+### 3. Протестировать CRUD на созданной таблице.  
