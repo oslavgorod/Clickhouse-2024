@@ -55,3 +55,10 @@ ORDER BY id
 
 ### 4. Добавить несколько новых полей, удалить пару старых.  
 
+> alter table menu add column added_1 Int32 FIRST;  
+  alter table menu add column added_2 Float64 AFTER desc;  
+  alter table menu add column added_3 DateTime64;
+
+Проверяем результат:  
+> describe menu FORMAT TSV;  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/006.png)  
