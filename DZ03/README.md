@@ -44,3 +44,8 @@ ORDER BY id
 > select * from menu \G  
 
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/003.png)  
+
+> alter table menu update price = '125.50' where id = 5
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/004.png)  
+
