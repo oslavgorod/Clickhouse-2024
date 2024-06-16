@@ -49,3 +49,9 @@ ORDER BY id
 
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/004.png)  
 
+> alter table menu delete where `date` = '2021-12-31 19:25:00'  
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/005.png)  
+
+### 4. Добавить несколько новых полей, удалить пару старых.  
+
