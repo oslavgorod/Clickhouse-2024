@@ -84,3 +84,23 @@ ORDER BY id
 
 ### 6. Материализовать таблицу из п.5 (в виде таблицы)  
 
+Создаем таблицу из файла Menu.csv:  
+> create table menu_import as file('Menu.csv')
+
+Создаем таблицу для материализованного представления:  
+> create table menu_materialized  
+(  
+  id Int64,  
+  name String,  
+  sponsor String,  
+  location String  
+)  
+ENGINE = MergeTree  
+ORDER BY id  
+
+Создаем материалиованное представление:  
+> CREATE MATERIALIZED VIEW menu_mv  
+TO menu_materialized  
+AS SELECT id, name, sponsor, location  
+from menu_import  
+  
