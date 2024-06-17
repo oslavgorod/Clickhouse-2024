@@ -78,7 +78,7 @@ ORDER BY id
 ### 5. Заселектить таблицу (любую) из sample dataset [Menus](https://clickhouse.com/docs/en/getting-started/example-datasets/menus)  
 Копируем файл из датасета в /var/lib/clickhouse/user_files/  
 После этого выполняем запрос:  
-> select * from file('Menu.csv') limit 1 \G  
+> select * from file('Menu.csv') limit 1 \G
 
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/008.png)  
 
