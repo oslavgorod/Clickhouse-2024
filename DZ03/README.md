@@ -114,6 +114,8 @@ from menu_import
 Смотрим из каких партов состоит таблица:  
 > SELECT name, path FROM system.parts where table = 'menu'
 
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/011.png)  
+
 Отсоединяем:  
 > ALTER TABLE menu DETACH PART 'all_3_3_0_7'  
 
