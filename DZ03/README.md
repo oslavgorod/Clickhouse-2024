@@ -110,4 +110,15 @@ from menu_import
 
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/011.png)  
 
-### Поработать с партами. Сделать attach/detach/drop. Добавить данных в первоначально созданную таблицу.  
+### 7. Поработать с партами. Сделать attach/detach/drop. Добавить данных в первоначально созданную таблицу.  
+Смотрим из каких партов состоит таблица:  
+> SELECT name, path FROM system.parts where table = 'menu'
+
+Отсоединяем:  
+> ALTER TABLE menu DETACH PART 'all_3_3_0_7'  
+
+Присоединяем:  
+> ALTER TABLE menu ATTACH PART 'all_3_3_0_7'  
+
+Удаляем:  
+> ALTER TABLE menu DROP PART 'all_3_3_0_7'
