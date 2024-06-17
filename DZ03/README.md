@@ -85,7 +85,9 @@ ORDER BY id
 ### 6. Материализовать таблицу из п.5 (в виде таблицы)  
 
 Создаем таблицу из файла Menu.csv:  
-> create table menu_import as file('Menu.csv')
+> create table menu_import as file('Menu.csv')  
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/009.png)  
 
 Создаем таблицу для материализованного представления:  
 > create table menu_materialized  
@@ -96,11 +98,16 @@ ORDER BY id
   location String  
 )  
 ENGINE = MergeTree  
-ORDER BY id  
+ORDER BY id
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/010.png)  
 
 Создаем материалиованное представление:  
 > CREATE MATERIALIZED VIEW menu_mv  
 TO menu_materialized  
 AS SELECT id, name, sponsor, location  
 from menu_import  
-  
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ03/011.png)  
+
+### Поработать с партами. Сделать attach/detach/drop. Добавить данных в первоначально созданную таблицу.  
