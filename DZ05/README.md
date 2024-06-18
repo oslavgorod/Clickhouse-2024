@@ -106,6 +106,8 @@ PRIMARY KEY id
 ORDER BY (id, status)
 
 Вставляем данные:  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/008.png)  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/009.png)  
 > INSERT INTO tbl6 VALUES (23, 'success', '1000', 'Confirmed', 1);
 INSERT INTO tbl6 VALUES (23, 'success', '1000', 'Confirmed', -1), (23, 'success', '2000', 'Cancelled', 1);
 
