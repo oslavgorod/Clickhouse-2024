@@ -68,7 +68,7 @@ ORDER BY (CounterID, StartDate)
 Вставляем данные:  
 > INSERT INTO tbl4 VALUES(0, '2019-11-11', 1);  
 INSERT INTO tbl4 VALUES(1, '2019-11-12', 1);  
-
+_____________________________________________________________________
 > CREATE TABLE tbl5  
 (  
     CounterID UInt8,  
@@ -87,3 +87,9 @@ group by CounterID, StartDate;
 
 > INSERT INTO tbl5 VALUES (1,'2019-11-12',1);
 
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/006.png)  
+
+Результат:  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/007.png)  
+
+### 5.  
