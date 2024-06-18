@@ -6,5 +6,9 @@
 FROM movies AS films  
 INNER JOIN genres AS genres ON films.id = genres.movie_id  
 ORDER BY films.name ASC  
-LIMIT 10
 
+Результат:  
+Первые 10 позиций
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ07/img/001.png)  
+
+### Запросить все фильмы, у которых нет жанра  
