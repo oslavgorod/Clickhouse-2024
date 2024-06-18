@@ -55,3 +55,35 @@ INSERT INTO tbl3 VALUES (23, 'success', '2000', 'Cancelled');
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/005.png)  
 
 ### 4.  
+> CREATE TABLE tbl4  
+(  
+    CounterID UInt8,  
+    StartDate Date,  
+    UserID UInt64  
+)  
+ENGINE = MergeTree  
+PARTITION BY toYYYYMM(StartDate)  
+ORDER BY (CounterID, StartDate)  
+
+Вставляем данные:  
+> INSERT INTO tbl4 VALUES(0, '2019-11-11', 1);  
+INSERT INTO tbl4 VALUES(1, '2019-11-12', 1);  
+
+> CREATE TABLE tbl5  
+(  
+    CounterID UInt8,  
+    StartDate Date,  
+    UserID AggregateFunction(uniq, UInt64)  
+)  
+ENGINE = AggregatingMergeTree  
+PARTITION BY toYYYYMM(StartDate)  
+ORDER BY (CounterID, StartDate)
+
+Вставляем данные:  
+> INSERT INTO tbl5  
+select CounterID, StartDate, uniqState(UserID)  
+from tbl4  
+group by CounterID, StartDate;
+
+> INSERT INTO tbl5 VALUES (1,'2019-11-12',1);
+
