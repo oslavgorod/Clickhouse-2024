@@ -32,3 +32,22 @@ ORDER BY key
 > INSERT INTO tbl2 Values(1,1),(1,2),(2,1);
 
 Результат:  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/003.png)  
+
+### 3.  
+> CREATE TABLE tbl3  
+(  
+    id Int32,  
+    status String,  
+    price String,  
+    comment String  
+)  
+ENGINE = ReplacingMergeTree  
+PRIMARY KEY id  
+ORDER BY (id, status)  
+
+Вставляем данные:  
+> INSERT INTO tbl3 VALUES (23, 'success', '1000', 'Confirmed');  
+INSERT INTO tbl3 VALUES (23, 'success', '2000', 'Cancelled');
+
+Результат:  
