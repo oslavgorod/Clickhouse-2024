@@ -16,8 +16,8 @@ ORDER BY UserID
 INSERT INTO tbl1 VALUES (4324182021466249494, 5, 146, 1, 1),(4324182021466249494, 6, 185, 1, 2);
 
 Результат:  
-![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/001.png)  
-![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/002.png)  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/001.png)  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/002.png)  
 
 ### 2.  
 > CREATE TABLE tbl2  
@@ -32,7 +32,7 @@ ORDER BY key
 > INSERT INTO tbl2 Values(1,1),(1,2),(2,1);
 
 Результат:  
-![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/003.png)  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/003.png)  
 
 ### 3.  
 > CREATE TABLE tbl3  
@@ -51,3 +51,7 @@ ORDER BY (id, status)
 INSERT INTO tbl3 VALUES (23, 'success', '2000', 'Cancelled');
 
 Результат:  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/004.png)  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/005.png)  
+
+### 4.  
