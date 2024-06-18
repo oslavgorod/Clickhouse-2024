@@ -88,6 +88,7 @@ group by CounterID, StartDate;
 > INSERT INTO tbl5 VALUES (1,'2019-11-12',1);
 
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/006.png)  
+Ошибка возникает из-за того, что в AggregatingMergeTree для вставки данных используйте INSERT SELECT с агрегатными функциями, а не прямое значение.  
 
 Результат:  
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/007.png)  
