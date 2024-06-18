@@ -93,3 +93,21 @@ group by CounterID, StartDate;
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/img/007.png)  
 
 ### 5.  
+> CREATE TABLE tbl6  
+(  
+    id Int32,  
+    status String,  
+    price String,  
+    comment String,  
+    sign Int8  
+)  
+ENGINE = CollapsingMergeTree(sign)  
+PRIMARY KEY id  
+ORDER BY (id, status)
+
+Вставляем данные:  
+> INSERT INTO tbl6 VALUES (23, 'success', '1000', 'Confirmed', 1);
+INSERT INTO tbl6 VALUES (23, 'success', '1000', 'Confirmed', -1), (23, 'success', '2000', 'Cancelled', 1);
+
+Результат:  
+
