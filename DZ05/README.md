@@ -8,7 +8,7 @@
     Sign Int8,  
     Version UInt8  
 )  
-ENGINE = CollapsingMergeTree(Sign)  
+ENGINE = VersionedCollapsingMergeTree(Sign, Version)  
 ORDER BY UserID
 
 Вставляем данные:  
