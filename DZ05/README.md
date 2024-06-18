@@ -1,5 +1,5 @@
 # ДЗ 05  
-### 1  
+### 1.  
 > CREATE TABLE tbl1  
 (  
     UserID UInt64,  
@@ -15,8 +15,20 @@ ORDER BY UserID
 > INSERT INTO tbl1 VALUES (4324182021466249494, 5, 146, -1, 1);  
 INSERT INTO tbl1 VALUES (4324182021466249494, 5, 146, 1, 1),(4324182021466249494, 6, 185, 1, 2);
 
-Результаты:  
+Результат:  
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/001.png)  
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ05/002.png)  
 
-### 2  
+### 2.  
+> CREATE TABLE tbl2  
+(  
+    key UInt32,  
+    value UInt32  
+)  
+ENGINE = SummingMergeTree  
+ORDER BY key
+
+Вставляем данные:
+> INSERT INTO tbl2 Values(1,1),(1,2),(2,1);
+
+Результат:  
