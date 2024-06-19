@@ -1,4 +1,6 @@
 # ДЗ 07  
+Создана БД с таблицами из [описания ДЗ](https://docs.google.com/document/d/1qIUv3RaRJ60boylxQF2rUdPcqNqAZa8V-yhGVbY6PBM/edit?usp=sharing)  
+
 ### Найти жанры для каждого фильма  
 > SELECT  
     films.name AS name,  
