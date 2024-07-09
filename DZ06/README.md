@@ -45,10 +45,12 @@ insert into hw_06 SELECT floor(randUniform(10000, 10999)) as user_id,  'play' as
 * аккамулятивную сумму expense, c окном по action,  
 * сортировка по email
 
->SELECT DISTINCT  
+>SELECT  
     user_id,  
     dictGet('hw06_dict', 'email', user_id) AS email,  
     sum(expense) OVER (PARTITION BY action ORDER BY expense ASC) AS summa  
 FROM hw_06  
 ORDER BY email ASC
+
+
 
