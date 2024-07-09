@@ -7,9 +7,9 @@
 
 >CREATE TABLE hw_06  
 (  
-    `user_id` UInt64,  
-    `action` String,  
-    `expense` UInt64  
+    user_id UInt64,  
+    action String,  
+    expense UInt64  
 )  
 ENGINE = MergeTree  
 PRIMARY KEY user_id  
@@ -21,8 +21,8 @@ SETTINGS index_granularity = 8192
 
 >CREATE DICTIONARY hw06_dict  
 (  
-    `user_id` UInt64,  
-    `email` String  
+    user_id UInt64,  
+    email String  
 )  
 PRIMARY KEY user_id  
 SOURCE(FILE(PATH '/var/lib/clickhouse/user_files/dict.csv' FORMAT 'CSV'))  
