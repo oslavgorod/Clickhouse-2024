@@ -55,6 +55,7 @@ FROM transactions
   
 ### 2. Функции для работы с типами данных  
 2.1 Преобразуйте "transaction_date" в строку формата "YYYY-MM-DD":  
+Так как "transaction_date" создана типом Date, то данные в нем хранятся в виде даты без времени. Если бы в столбце было Дата и время, то нужно было бы привести строку в формат даты функцией toDate().  
 >SELECT toString(transaction_date)  
 FROM transactions  
 
