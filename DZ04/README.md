@@ -56,22 +56,30 @@ FROM transactions
 ### 2. Функции для работы с типами данных  
 2.1 Преобразуйте "transaction_date" в строку формата "YYYY-MM-DD":  
 >SELECT toString(transaction_date)  
-FROM transactions
+FROM transactions  
 
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/img/007.png)  
+  
 2.2 Извлеките год и месяц из "transaction_date":  
 >SELECT  
     &emsp;toYear(transaction_date) AS Year,  
     &emsp;toMonth(transaction_date) AS Month  
-FROM transactions  
+FROM transactions
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/img/008.png)  
   
 2.3 Округлите "price" до ближайшего целого числа:  
 >SELECT round(price, 0) AS Rounded  
 FROM transactions
-
+  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/img/009.png)  
+  
 2.4 Преобразуйте "transaction_id" в строку:  
 >SELECT toString(transaction_id)  
 FROM transactions
 
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/img/010.png)  
+  
 ### 3. User-Defined Functions (UDFs)  
 3.1 Создайте простую UDF для расчета общей стоимости транзакции:  
 >CREATE FUNCTION total_price AS (quantity, price) -> (quantity * price)
@@ -80,15 +88,18 @@ FROM transactions
 >SELECT  
     &emsp;transaction_id,  
     &emsp;toDecimal32(total_price(quantity, price), 2) AS total_price  
-FROM transactions  
+FROM transactions
+
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/img/011.png)  
   
 3.3 Создайте UDF для классификации транзакций на «высокоценные» и «малоценные» на основе порогового значения (например, 100):  
->CREATE FUNCTION category AS total_price -> if(total_price > 100, 'High', 'Low')
-
+>CREATE FUNCTION category AS total_price -> if(total_price > 100, 'High', 'Low')  
+  
 3.4 Примените UDF для категоризации каждой транзакции:  
 >SELECT  
     &emsp;transaction_id,  
     &emsp;toDecimal32(total_price(quantity, price), 2) AS total_price,  
     &emsp;category(total_price) AS category  
-FROM transactions
-
+FROM transactions  
+  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/img/012.png)  
