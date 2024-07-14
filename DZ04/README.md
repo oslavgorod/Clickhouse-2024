@@ -70,3 +70,12 @@ FROM transactions
 FROM transactions  
   
 3.3 Создайте UDF для классификации транзакций на «высокоценные» и «малоценные» на основе порогового значения (например, 100):  
+>CREATE FUNCTION category AS total_price -> if(total_price > 100, 'High', 'Low')
+
+3.4 Примените UDF для категоризации каждой транзакции:  
+>SELECT  
+    &emsp;transaction_id,  
+    &emsp;toDecimal32(total_price(quantity, price), 2) AS total_price,  
+    &emsp;category(total_price) AS category  
+FROM transactions
+
