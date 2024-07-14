@@ -56,3 +56,17 @@ FROM transactions
 FROM transactions
 
 2.4 Преобразуйте "transaction_id" в строку:  
+>SELECT toString(transaction_id)  
+FROM transactions
+
+### 3. User-Defined Functions (UDFs)  
+3.1 Создайте простую UDF для расчета общей стоимости транзакции:  
+>CREATE FUNCTION total_price AS (quantity, price) -> (quantity * price)
+  
+3.2 Используйте созданную UDF для расчета общей цены для каждой транзакции:  
+>SELECT  
+    &emsp;transaction_id,  
+    &emsp;toDecimal32(total_price(quantity, price), 2) AS total_price  
+FROM transactions  
+  
+3.3 Создайте UDF для классификации транзакций на «высокоценные» и «малоценные» на основе порогового значения (например, 100):  
