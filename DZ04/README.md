@@ -21,6 +21,6 @@ ORDER BY transaction_id
     &emsp;quantity,  
     &emsp;price,  
     &emsp;toDateTime(transaction_date) AS transaction_date  
-FROM file(`/var/lib/clickhouse/user_files/dz04.csv`)
+FROM file("/var/lib/clickhouse/user_files/dz04.csv")
 
 
