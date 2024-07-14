@@ -1,4 +1,5 @@
 # ДЗ 04  
+Задание лежит по ![ссылке.](https://docs.google.com/document/d/1hHqRv7lUUDmDkhzXrd0GIx7deF9Ez4mKpoYzHtDjoqQ/edit)  
 ## Вариант 1  
 Создаем таблицу:  
 >CREATE TABLE transactions  
@@ -12,8 +13,9 @@
 )  
 ENGINE = MergeTree  
 ORDER BY transaction_id  
-
-Вставляем немного данных из файла dz04.csv:  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/img/001.png)
+  
+Вставляем немного данных из файла ![dz04.csv](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ04/dz04.csv):  
 >INSERT INTO hw04.transactions SELECT  
     &emsp;transaction_id,  
     &emsp;user_id,  
