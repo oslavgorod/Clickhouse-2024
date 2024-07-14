@@ -29,3 +29,20 @@ FROM file("/var/lib/clickhouse/user_files/dz04.csv")
 FROM transactions
 
 1.2 Найдите средний доход с одной сделки:  
+>SELECT toDecimal32(avg(quantity * price), 2) AS summa  
+FROM transactions
+
+1.3 Определите общее количество проданной продукции:  
+>SELECT sum(quantity)  
+FROM transactions
+
+1.4 Подсчитайте количество уникальных пользователей, совершивших покупку:  
+>SELECT countDistinct(user_id)  
+FROM transactions
+
+### 2. Функции для работы с типами данных  
+2.1 Преобразуйте "transaction_date" в строку формата "YYYY-MM-DD":  
+>SELECT toString(transaction_date)  
+FROM transactions
+
+2.2 Извлеките год и месяц из "transaction_date":  
