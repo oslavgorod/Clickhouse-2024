@@ -13,7 +13,7 @@
 ENGINE = MergeTree  
 ORDER BY transaction_id  
 
-Вставляем немного данных из файла dz04.csv  
+Вставляем немного данных из файла dz04.csv:  
 >INSERT INTO hw04.transactions SELECT  
     &emsp;transaction_id,  
     &emsp;user_id,  
@@ -23,4 +23,5 @@ ORDER BY transaction_id
     &emsp;toDateTime(transaction_date) AS transaction_date  
 FROM file("/var/lib/clickhouse/user_files/dz04.csv")
 
-
+### 1. Агрегатные функци  
+1.1 Рассчитайте общий доход от всех операций:  
