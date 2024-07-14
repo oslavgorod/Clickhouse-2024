@@ -3,12 +3,12 @@
 Создаем таблицу:  
 >CREATE TABLE transactions  
 (  
-    emsptransaction_id UInt32,  
-    user_id UInt32,  
-    product_id UInt32,  
-    quantity UInt8,  
-    price Float32,  
-    transaction_date Date  
+    &emsp;transaction_id UInt32,  
+    &emsp;user_id UInt32,  
+    &emsp;product_id UInt32,  
+    &emsp;quantity UInt8,  
+    &emsp;price Float32,  
+    &emsp;transaction_date Date  
 )  
 ENGINE = MergeTree  
 ORDER BY transaction_id
