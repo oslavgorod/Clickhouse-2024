@@ -46,3 +46,13 @@ FROM transactions
 FROM transactions
 
 2.2 Извлеките год и месяц из "transaction_date":  
+>SELECT  
+    &emsp;toYear(transaction_date) AS Year,  
+    &emsp;toMonth(transaction_date) AS Month  
+FROM transactions  
+  
+2.3 Округлите "price" до ближайшего целого числа:  
+>SELECT round(price, 0) AS Rounded  
+FROM transactions
+
+2.4 Преобразуйте "transaction_id" в строку:  
