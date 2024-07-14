@@ -3,7 +3,7 @@
 Создаем таблицу:  
 >CREATE TABLE transactions  
 (  
-    transaction_id UInt32,  
+    emsptransaction_id UInt32,  
     user_id UInt32,  
     product_id UInt32,  
     quantity UInt8,  
