@@ -1,7 +1,7 @@
 # ДЗ 09  
-##1  
+### 1  
 Для выполнения задания будет использоваться таблица trips, загруженная ранее из этого [датасета](https://clickhouse.com/docs/en/getting-started/example-datasets/nyc-taxi).  
-##2  
+### 2  
 Создаем новую таблицу:  
 >CREATE TABLE trips_rep AS trips  
 ENGINE = ReplicatedMergeTree('/clickhouse/tables/{shard}/trips_v1`', '{replica}')  
@@ -21,4 +21,5 @@ WHERE concat(database, '.', `table`) = 'default.trips'
 Удаляем старую таблицу и переименовывем созданную:  
 >DROP TABLE trips;
 RENAME TABLE trips_rep TO trips;
-
+  
+### 3  
