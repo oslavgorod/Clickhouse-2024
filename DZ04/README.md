@@ -25,3 +25,7 @@ FROM file("/var/lib/clickhouse/user_files/dz04.csv")
 
 ### 1. Агрегатные функци  
 1.1 Рассчитайте общий доход от всех операций:  
+>SELECT toDecimal32(sum(quantity * price), 2) AS summa  
+FROM transactions
+
+1.2 Найдите средний доход с одной сделки:  
