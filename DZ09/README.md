@@ -26,12 +26,15 @@ RENAME TABLE trips_rep TO trips;
 Добавляем две реплики. Пример настройки clickhouse-keeper c второй реплики:  
 
 Часть config.xml с той же реплики:  
-
+  
+### 4  
 Выгружаем результат первого запроса в файл 001.json :  
 >clickhouse-client -q "SELECT getMacro(‘replica’), * FROM remote('click01,click02,click03',system.parts) FORMAT JSONEachRow;" > 001.json
-
+  
 Выгружаем результат второго запроса в файл 002.json :  
 >SELECT * FROM system.replicas FORMAT JSONEachRow;
 
-### 4  
+### 5  
+>ALTER TABLE trips  
+    &emsp;(MODIFY TTL dropoff_datetime + toIntervalDay(7))
 
