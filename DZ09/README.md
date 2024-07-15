@@ -4,7 +4,7 @@
 ### 2  
 Создаем новую таблицу:  
 >CREATE TABLE trips_rep AS trips  
-ENGINE = ReplicatedMergeTree('/clickhouse/tables/{shard}/trips_v1`', '{replica}')  
+ENGINE = ReplicatedMergeTree('/clickhouse/tables/{shard}/trips_v1', '{replica}')  
 PRIMARY KEY (pickup_datetime, dropoff_datetime)  
 ORDER BY (pickup_datetime, dropoff_datetime)  
 SETTINGS index_granularity = 8192
