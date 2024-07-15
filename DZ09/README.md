@@ -16,7 +16,7 @@ WHERE concat(database, '.', 'table') = 'default.trips'
 
 Присоединяем найденные партиции к новой таблице:  
 >ALTER TABLE trips_rep  
-    (ATTACH PARTITION ID 'all' FROM trips)
+    &emsp;(ATTACH PARTITION ID 'all' FROM trips)
 
 Удаляем старую таблицу и переименовывем созданную:  
 >DROP TABLE trips;  
@@ -28,10 +28,10 @@ RENAME TABLE trips_rep TO trips;
 Часть config.xml с той же реплики:  
   
 ### 4  
-Выгружаем результат первого запроса в файл 001.json :  
+Выгружаем результат первого запроса в файл [001.json](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ09/001.json) :  
 >clickhouse-client -q "SELECT getMacro(‘replica’), * FROM remote('click01,click02,click03',system.parts) FORMAT JSONEachRow;" > 001.json
   
-Выгружаем результат второго запроса в файл 002.json :  
+Выгружаем результат второго запроса в файл [002.json](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ09/002.json) :  
 >clickhouse-client -q "SELECT * FROM system.replicas FORMAT JSONEachRow;" > 002.json  
   
 ### 5  
