@@ -12,7 +12,7 @@ SETTINGS index_granularity = 8192
 Находим partition_id от старой таблицы:  
 >SELECT DISTINCT partition_id  
 FROM system.parts  
-WHERE concat(database, '.', `table`) = 'default.trips'
+WHERE concat(database, '.', 'table') = 'default.trips'
 
 Присоединяем найденные партиции к новой таблице:  
 >ALTER TABLE trips_rep  
