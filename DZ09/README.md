@@ -32,8 +32,8 @@ RENAME TABLE trips_rep TO trips;
 >clickhouse-client -q "SELECT getMacro(‘replica’), * FROM remote('click01,click02,click03',system.parts) FORMAT JSONEachRow;" > 001.json
   
 Выгружаем результат второго запроса в файл 002.json :  
->SELECT * FROM system.replicas FORMAT JSONEachRow;
-
+>clickhouse-client -q "SELECT * FROM system.replicas FORMAT JSONEachRow;" > 002.json  
+  
 ### 5  
 >ALTER TABLE trips  
     &emsp;(MODIFY TTL dropoff_datetime + toIntervalDay(7))
