@@ -19,7 +19,7 @@ WHERE concat(database, '.', `table`) = 'default.trips'
     (ATTACH PARTITION ID 'all' FROM trips)
 
 Удаляем старую таблицу и переименовывем созданную:  
->DROP TABLE trips;
-RENAME TABLE trips_rep TO trips;
+>DROP TABLE trips;  
+RENAME TABLE trips_rep TO trips;  
   
 ### 3  
