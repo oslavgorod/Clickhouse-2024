@@ -23,3 +23,15 @@ WHERE concat(database, '.', 'table') = 'default.trips'
 RENAME TABLE trips_rep TO trips;  
   
 ### 3  
+Добавляем две реплики. Пример настройки clickhouse-keeper c второй реплики:  
+
+Часть config.xml с той же реплики:  
+
+Выгружаем результат первого запроса в файл 001.json :  
+>clickhouse-client -q "SELECT getMacro(‘replica’), * FROM remote('click01,click02,click03',system.parts) FORMAT JSONEachRow;" > 001.json
+
+Выгружаем результат второго запроса в файл 002.json :  
+>SELECT * FROM system.replicas FORMAT JSONEachRow;
+
+### 4  
+
