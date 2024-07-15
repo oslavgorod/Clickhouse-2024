@@ -1,6 +1,6 @@
 # ДЗ 09  
 ### 1  
-Для выполнения задания будет использоваться таблица trips, загруженная ранее из этого [датасета](https://clickhouse.com/docs/en/getting-started/example-datasets/nyc-taxi).  
+Для выполнения задания будет использоваться таблица trips, загруженная из этого [датасета](https://clickhouse.com/docs/en/getting-started/example-datasets/nyc-taxi).  
 ### 2  
 Создаем новую таблицу:  
 >CREATE TABLE trips_rep AS trips  
