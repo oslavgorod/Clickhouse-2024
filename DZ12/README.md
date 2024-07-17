@@ -6,7 +6,7 @@
 >CREATE ROLE devs  
   
 ### 3. Выдать роли devs права на SELECT на любую таблицу  
->GRANT SELECT ON *.* TO devs WITH GRANT OPTION  
+>GRANT SELECT ON \*.\* TO devs WITH GRANT OPTION  
   
 ### 4. Выдать роль devs пользователю jhon  
 >GRANT devs TO jhon  
