@@ -12,19 +12,18 @@
 >GRANT devs TO jhon  
   
 ### 5. Предоставить результаты SELECT из system-таблиц соответсвующих созданным сущностям  
->SELECT *  
-FROM system.users  
-WHERE name = 'jhon'  
+>SELECT * FROM system.users WHERE name = 'jhon' \G  
   
->SELECT *  
-FROM system.roles  
-WHERE name = 'devs'  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ12/img/001.png)  
   
->SELECT *
-FROM system.role_grants
-WHERE granted_role_name = 'devs'  
+>SELECT * FROM system.roles WHERE name = 'devs' \G  
   
->SELECT *  
-FROM system.grants  
-WHERE role_name = 'devs'
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ12/img/002.png)  
   
+>SELECT * FROM system.role_grants WHERE granted_role_name = 'devs' \G  
+  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ12/img/003.png)  
+  
+>SELECT * FROM system.grants WHERE role_name = 'devs' \G  
+  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ12/img/004.png)  
