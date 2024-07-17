@@ -23,4 +23,8 @@ WHERE name = 'devs'
 >SELECT *
 FROM system.role_grants
 WHERE granted_role_name = 'devs'  
-    
+  
+>SELECT *  
+FROM system.grants  
+WHERE role_name = 'devs'
+  
