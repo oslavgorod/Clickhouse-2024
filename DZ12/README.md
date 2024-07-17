@@ -26,4 +26,4 @@
   
 >SELECT * FROM system.grants WHERE role_name = 'devs'  
   
-![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ12/img/004.png)  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ12/img/005.png)  
