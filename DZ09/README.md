@@ -35,7 +35,7 @@ RENAME TABLE trips_rep TO trips;
 В этом конфиге server_id должен быть уникален для каждой реплики. На скриншоте представлен конфиг со второй реплики из трех.  
   
 Часть config.xml clickhouse-server:  
-![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ09/img/009.png)  
+![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ09/img/007.png)  
 ![](https://github.com/oslavgorod/Clickhouse-2024/blob/main/DZ09/img/005.png)  
 Здесь задаем макросы и указываем zookeeperы. Тэг replica должен быть уникален для каждой реплики.  
   
